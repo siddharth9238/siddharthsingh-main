@@ -1,0 +1,171 @@
+import type { Metadata, Viewport } from "next";
+import { Geist, Geist_Mono, Sora } from "next/font/google";
+import { siteConfig } from "@/data/portfolio";
+import "./globals.css";
+
+const geistSans = Geist({
+  variable: "--font-geist-sans",
+  subsets: ["latin"],
+});
+
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
+
+const sora = Sora({
+  variable: "--font-sora",
+  subsets: ["latin"],
+  weight: ["600", "700"],
+});
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+};
+
+export const metadata: Metadata = {
+  metadataBase: new URL(siteConfig.url),
+  title: {
+    default: `${siteConfig.name} — ${siteConfig.title} | TypeScript, React, Node.js`,
+    template: `%s | ${siteConfig.name}`,
+  },
+  description: siteConfig.description,
+  keywords: [
+    "Siddharth Singh",
+    "Full Stack Engineer",
+    "Java Developer",
+    "Spring Boot",
+    "React Developer",
+    "Node.js",
+    "Software Engineer",
+    "Cuttack",
+    "Odisha"
+  ],
+  authors: [{ name: siteConfig.name, url: siteConfig.url }],
+  creator: siteConfig.name,
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: siteConfig.url,
+    siteName: siteConfig.name,
+    title: `${siteConfig.name} — ${siteConfig.title}`,
+    description: siteConfig.description,
+    images: [
+      {
+        url: "/images/profile.jpeg",
+        width: 800,
+        height: 800,
+        alt: `${siteConfig.name} — ${siteConfig.title}`,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${siteConfig.name} — ${siteConfig.title}`,
+    description: siteConfig.description,
+    images: ["/images/profile.jpeg"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  alternates: {
+    canonical: siteConfig.url,
+  },
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      name: siteConfig.name,
+      url: siteConfig.url,
+      description: siteConfig.description,
+    },
+    {
+      "@type": "ProfilePage",
+      mainEntity: {
+        "@type": "Person",
+        name: siteConfig.name,
+        jobTitle: siteConfig.title,
+        description: siteConfig.description,
+        url: siteConfig.url,
+        email: siteConfig.email,
+        image: `${siteConfig.url}/images/profile.jpeg`,
+        sameAs: [siteConfig.links.github, siteConfig.links.linkedin, siteConfig.links.linktree],
+        knowsAbout: [
+          "TypeScript",
+          "React",
+          "Node.js",
+          "Express",
+          "PostgreSQL",
+          "REST APIs",
+          "Microservices",
+          "React Native",
+          "Next.js",
+          "Python",
+          "AI Solutions",
+          "Java",
+          "Springboot",
+          "Javascript(ES6+)",
+          "MySQL",
+          "JWT Auth",
+          "Role-Based Access Control (RBAC)",
+          "Data Structures & Algorithms",
+          "Internt of Things(IoT)"
+        ],
+       worksFor: {
+          "@type": "Organization",
+          name: "Nvisagecomp Solutions LLP",
+        },
+        alumniOf: {
+          "@type": "CollegeOrUniversity",
+          name: "Adamas University",
+        },
+        address: {
+          "@type": "PostalAddress",
+          addressLocality: "Cuttack",
+          addressRegion: "Odisha",
+          addressCountry: "IN",
+        },
+      },
+    },
+  ],
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+        {/* Prevent flash: apply saved theme before paint */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){try{var t=localStorage.getItem('theme');var d=t==='dark'||(t!=='light'&&window.matchMedia('(prefers-color-scheme:dark)').matches);if(d){document.documentElement.classList.add('dark')}else{document.documentElement.classList.remove('dark')}}catch(e){}})()`,
+          }}
+        />
+      </head>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} ${sora.variable} antialiased bg-background text-foreground`}
+      >
+        {children}
+      </body>
+    </html>
+  );
+}
