@@ -77,7 +77,7 @@ export const experienceData: Experience[] = [
     company: "YHills",
     role: "Full Stack Web Developer Intern",
     period: "Jul 2025 - Oct 2025",
-    location: "India · Hybrid",
+    location: "Noida, Uttarpradesh, India · Hybrid",
     type: "Internship",
     highlights: [
       "Programmed scalable modules, integrating Web Services by constructing Java backends and consuming data asynchronously from a React frontend using AJAX[cite: 23, 24].",
@@ -96,7 +96,7 @@ export const experienceData: Experience[] = [
     company: "SaiKet Systems",
     role: "Software & Full-stack Developer",
     period: "Jul 2025 - Aug 2025",
-    location: "India · Hybrid",
+    location: "Pune, Maharashtra, India · Hybrid",
     type: "Internship",
     highlights: [
       "Developed full-stack web applications utilizing React.js and Node.js.",
@@ -113,7 +113,7 @@ export const experienceData: Experience[] = [
     company: "YHills",
     role: "AI & Machine Learning Intern",
     period: "Aug 2023 - Nov 2023",
-    location: "India · Hybrid",
+    location: "Noida, Uttarpradesh, India · Hybrid",
     type: "Internship",
     highlights: [
       "Built and deployed machine learning models for advanced predictive analysis.",
