@@ -100,15 +100,27 @@ export default function Achievements() {
                 <GraduationCap size={14} />
                 Education
               </h3>
-              <motion.div variants={itemVariants} className="glass card-hover p-4">
-                <p className="font-semibold text-sm">{educationData.degree}</p>
-                <p className="text-xs text-muted mt-1">
-                  {educationData.institution}
-                </p>
-                <p className="text-xs text-muted/70 mt-1">
-                  {educationData.location} &middot; {educationData.period}
-                </p>
-              </motion.div>
+              <div className="space-y-3">
+                {educationData.map((edu, index) => (
+                  <motion.div key={index} variants={itemVariants} className="glass card-hover p-4">
+                    <div className="flex justify-between items-start gap-3">
+                      <p className="font-semibold text-sm">{edu.degree}</p>
+                      {/* This line checks if cgpa exists, and if so, renders the badge */}
+                      {edu.cgpa && (
+                        <span className="text-[10px] font-mono font-medium text-accent bg-accent/10 px-2 py-0.5 rounded-full shrink-0">
+                          CGPA: {edu.cgpa}
+                        </span>
+                      )}
+                    </div>
+                    <p className="text-xs text-muted mt-1">
+                      {edu.institution}
+                    </p>
+                    <p className="text-xs text-muted/70 mt-1">
+                      {edu.location} &middot; {edu.period}
+                    </p>
+                  </motion.div>
+                ))}
+              </div>
             </div>
 
             {/* Certifications */}

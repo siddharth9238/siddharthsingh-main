@@ -74,19 +74,22 @@ export const experienceData: Experience[] = [
     ],
   },
   {
-    company: "Cognifyz Technologies",
-    role: "Data Analyst",
-    period: "Jul 2025 - Aug 2025",
+    company: "YHills",
+    role: "Full Stack Web Developer Intern",
+    period: "Jul 2025 - Oct 2025",
     location: "India · Hybrid",
     type: "Internship",
     highlights: [
-      "Analyzed multi-city restaurant datasets to identify cuisine demand patterns and regional trends.",
-      "Built visual dashboards to extract customer behavior insights and support data-driven decision making."
+      "Programmed scalable modules, integrating Web Services by constructing Java backends and consuming data asynchronously from a React frontend using AJAX[cite: 23, 24].",
+      "Increased overall application rendering efficiency by 70%[cite: 23, 24].",
+      "Diagnosed and resolved frontend-backend integration bottlenecks by standardizing error response formats and improving backend input validation, reducing API error rates by 80%[cite: 23, 24]."
     ],
     tech: [
-      "Data Analysis",
-      "Data Visualization",
-      "Dashboards"
+      "Java",
+      "React",
+      "AJAX",
+      "Web Services",
+      "REST APIs"
     ],
   },
   {
@@ -214,12 +217,22 @@ export const mentoringData = {
   period: "2025 - 2026",
 };
 
-export const educationData = {
-  degree: "Master of Computer Applications (MCA)",
-  institution: "Adamas University",
-  location: "Kolkata, India",
-  period: "2024 - 2026",
-};
+export const educationData = [
+  {
+    degree: "Master of Computer Applications (MCA)",
+    institution: "Adamas University",
+    cgpa: "8.5/10",
+    location: "Kolkata, India",
+    period: "2024 - 2026",
+  },
+  {
+    degree: "Bachelor of Computer Applications (BCA)",
+    institution: "Utkal University",
+    cgpa: "7.0/10",
+    location: "Bhubaneswar, India",
+    period: "2021 - 2024",
+  }
+];
 
 export const certificationsData = [
   "SAP ABAP Backend Developer (Certified Professional)",

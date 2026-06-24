@@ -43,7 +43,7 @@ export default function Experience() {
           <div className="space-y-8">
             {experienceData.map((exp, index) => (
               <motion.div
-                key={exp.company}
+                key={index}
                 variants={cardVariants}
                 className="relative pl-8 md:pl-12"
               >
