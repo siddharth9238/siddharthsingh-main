@@ -277,14 +277,14 @@ export const projectsData: Project[] = [
     description:
       "Engineered a responsive dashboard processing 60+ real-time device metrics per minute. Constructed an MVC Node.js backend, achieving a 75% reduction in hardware latency with ESP32-CAM and applying OOJS for biometric MFA.",
     tech: ["Node.js", "Express", "React", "JavaScript", "Arduino", "Tailwind CSS"],
-    context: "IoT & Full Stack",
+    context: "IoT Full Stack & Flutter",
   },
   {
     title: "WebFix-CMS Website Builder",
     description:
       "Produced a web platform featuring a drag-and-drop visual builder and 65+ custom templates. Built a robust RESTful backend using Node.js and Express to incorporate secure JWT authentication for 80+ simultaneous user sessions.",
     tech: ["Node.js", "Express", "MySQL", "JavaScript", "Flutter"],
-    context: "Content Management System",
+    context: "Full Stack & Flutter",
   },
   {
     title: "AccessIQ Role-Based Workflow",
@@ -298,7 +298,7 @@ export const projectsData: Project[] = [
     description:
       "Structured a backend system to onboard vendors and enforce compliance workflows, dynamically evaluating over 70 risk score parameters. Executed role-based access controls with an automated audit log tracking system.",
     tech: ["Java", "Spring Boot", "Spring Security", "PostgreSQL", "RBAC"],
-    context: "Risk Management API",
+    context: "Enterprise Backend & Risk Management API",
   },
 ];
 
