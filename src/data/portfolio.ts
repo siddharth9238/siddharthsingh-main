@@ -24,7 +24,7 @@ export const heroData = {
     primary: { label: "Get in Touch", href: "#contact" },
     secondary: {
       label: "Download Resume",
-      href: "/Singh_Siddharth_Resume_22-06-2026.pdf",
+      href: "/DELOITTE_NLA_CV.pdf",
     },
   },
 };
