@@ -24,7 +24,7 @@ export const heroData = {
     primary: { label: "Get in Touch", href: "#contact" },
     secondary: {
       label: "Download Resume",
-      href: "/DELOITTE_NLA_CV.pdf",
+      href: "/Siddharth_Singh_Resume_FullStack.pdf",
     },
   },
 };
@@ -39,7 +39,7 @@ export const aboutData = {
     { label: "LeetCode Solved", value: "150+" },
     { label: "Full-Stack Projects", value: "4" },
     { label: "Cloud Certifications", value: "2" },
-    { label: "MCA CGPA", value: "8.5" },
+    { label: "MCA CGPA", value: "8.1/10" },
   ],
 };
 
@@ -135,15 +135,14 @@ export interface SkillCategory {
 
 export const skillsData: SkillCategory[] = [
   {
-    title: "Backend & Languages",
+    title: "Languages",
     skills: [
-      "TypeScript",
+      "Java (Core & Advanced)",
       "JavaScript (ES6+)",
-      "Node.js",
-      "Express.js",
-      "NestJS",
-      "Spring Boot",
-      "Java",
+      "TypeScript",
+      "Vite",
+      "Golang",
+      "SQL",
       "Python",
       "C/C++",
     ],
@@ -152,57 +151,99 @@ export const skillsData: SkillCategory[] = [
     title: "Frontend",
     skills: [
       "React.js",
-      "TypeScript",
       "Next.js",
+      "NestJS",
       "HTML5",
       "CSS3",
       "Tailwind CSS",
-      "Bootstrap",
+      "Bootstrap 5",
       "Flutter",
+      "Responsive UI Development",
+    ],
+  },
+  {
+    title: "Backend",
+    skills: [
+      "Spring Boot",
+      "Spring Security",
+      "Node.js",
+      "Express.js",
+      "JPA/Hibernate",
+      "JDBC",
+      "Servlets",
     ],
   },
   {
     title: "Databases",
-    skills: ["MySQL", "PostgreSQL"],
+    skills: [
+      "PostgreSQL",
+      "MySQL",
+      "SQLite",
+      "Schema Design",
+      "Query Optimization",
+    ],
   },
   {
     title: "APIs & Architecture",
     skills: [
       "REST APIs",
-      "Spring Security",
-      "JPA/Hibernate",
-      "JWT Auth",
-      "RBAC",
-      "JDBC",
-      "Java Servlets",
-      "Spring APIs",
-    ],
-  },
-  {
-    title: "Core Concepts",
-    skills: [
-      "Object-Oriented Programming (OOP)",
-      "Data Structures & Algorithms",
-      "Software Development Life Cycle (SDLC)",
-      "Agile Methodologies",
-      "Design Patterns",
-      "Software Architecture",
+      "JWT Authentication",
+      "OAuth 2.0",
+      "Role-Based Access Control (RBAC)",
       "MVC Architecture",
-      "Asynchronous Programming",
+      "AJAX (Fetch/Axios)",
+      "Enterprise Workflows",
     ],
   },
   {
-    title: "AI & Tools ",
+    title: "Cloud & DevOps",
     skills: [
-      "Git & GitHub",
-      "SonarQube",
+      "Docker",
+      "Grafana",
+      "Prometheus",
+      "Git",
+      "GitHub",
+      "Linux",
+      "Maven",
+      "CI/CD",
+    ],
+  },
+  {
+    title: "Testing & Code Quality",
+    skills: [
       "Postman",
+      "SonarQube",
+      "ESLint",
+      "Prettier",
+      "Debugging",
+      "Performance Optimization",
+    ],
+  },
+  {
+    title: "Concepts",
+    skills: [
+      "Data Structures & Algorithms (150+ LeetCode)",
+      "OOP",
+      "Object-Oriented JavaScript (OOJS)",
+      "Multithreading",
+      "SDLC",
+      "Agile Methodologies",
+    ],
+  },
+  {
+    title: "Tools",
+    skills: [
+      "VS Code",
+      "IntelliJ IDEA",
+      "Visual Studio",
       "Babel",
-      "GitHub Co-pilot",
-      "OpenAI API",
-      "ChatGPT Codex",
-      "Claude AI",
-      "Gemini AI",
+      "Vite",
+      "Yarn",
+      "npm",
+      "Git Bash",
+      "Copilot",
+      "Claude Code",
+      "Replit",
     ],
   },
 ];
@@ -242,7 +283,7 @@ export const educationData = [
   {
     degree: "Master of Computer Applications (MCA)",
     institution: "Adamas University",
-    cgpa: "8.5/10",
+    cgpa: "8.1/10",
     location: "Kolkata, India",
     period: "2024 - 2026",
   },
@@ -273,11 +314,18 @@ export interface Project {
 
 export const projectsData: Project[] = [
   {
-    title: "Smart Door Lock IoT System Dashboard",
+    title: "PulseOps — Enterprise Monitoring & AI Operations Platform (Built on Grafana)",
     description:
-      "Engineered a responsive dashboard processing 60+ real-time device metrics per minute. Constructed an MVC Node.js backend, achieving a 75% reduction in hardware latency with ESP32-CAM and applying OOJS for biometric MFA.",
-    tech: ["Node.js", "Express", "React", "JavaScript", "Arduino", "Tailwind CSS"],
-    context: "IoT Full Stack & Flutter",
+      "Architected a high-performance enterprise observability platform utilizing React.js, TypeScript, and Redux Toolkit, integrating Prometheus time-series data to deliver real-time, AI-enhanced telemetry dashboards. Engineered scalable, concurrent Go microservices encompassing secure RESTful APIs, implementing robust Role-Based Access Control (RBAC), JWT authentication, and automated alert orchestration, while integrating AI-driven incident analysis and automated PDF reporting pipelines, leveraging SQLite for highly optimized, ACID-compliant state management and persistent data storage. Containerized the full-stack infrastructure utilizing Docker, establishing isolated environments to streamline CI/CD pipelines and ensure seamless deployment of monitoring agents and Grafana visualizations.",
+    tech: ["Go", "React.js", "TypeScript", "Redux Toolkit", "Grafana", "Prometheus", "SQLite", "Docker", "REST APIs"],
+    context: "Enterprise Monitoring & AI Operations",
+  },
+  {
+    title: "TREK — AI-Powered Travel Planning & Booking Platform",
+    description:
+      "Architected a secure, full-stack SPA using Vite, React.js, and TypeScript, backed by an Express.js RESTful API (MVC architecture) that features robust middleware pipelines, JWT-based authentication, and granular RBAC to secure complex user booking workflows. Orchestrated asynchronous third-party API integrations—including the Gemini API, Google Maps, and live Aviation data—to engineer dynamic, context-aware AI travel itinerary generation and real-time spatial visualizations. Engineered optimized SQLite relational schemas to efficiently process transactional booking records, and containerized the backend services and database environments using Docker to ensure cross-environment consistency and scalable deployment.",
+    tech: ["Vite", "React.js", "TypeScript", "Node.js", "Express.js", "SQLite", "JWT", "RBAC", "REST APIs", "Docker", "Gemini API"],
+    context: "AI-Powered Travel Platform",
   },
   {
     title: "WebFix-CMS Website Builder",
