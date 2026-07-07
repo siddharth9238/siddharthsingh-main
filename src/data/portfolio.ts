@@ -31,13 +31,15 @@ export const heroData = {
 
 export const aboutData = {
   summary: [
-    "I build full-stack applications end-to-end, specializing in Java/Spring Boot and Node.js backends seamlessly connected to modern React frontends via asynchronous data retrieval.",
-    "My focus is on creating secure, enterprise-grade systems with robust authentication (JWT), Role-Based Access Control (RBAC), and optimized SQL databases handling thousands of concurrent interactions.",
-    "I am currently completing my Master of Computer Applications (MCA) at Adamas University while consistently solving advanced Data Structures and Algorithms problems to sharpen my computational logic.",
+    "I build scalable, full-stack web applications using Java, Spring Boot, React, Next.js, TypeScript, and Node.js, developing secure RESTful APIs and responsive user interfaces with clean, maintainable architecture.",
+
+    "I specialize in backend engineering by designing enterprise-grade systems with JWT authentication, Spring Security, Role-Based Access Control (RBAC), SQL/NoSQL databases, API integration, caching, and cloud-ready deployment using modern DevOps practices.",
+
+    "I am a Master of Computer Applications (MCA) graduate from Adamas University with hands-on experience in full-stack development, microservices, AI-powered applications, and DevOps tools, while continuously strengthening my problem-solving skills through Data Structures & Algorithms and real-world projects.",
   ],
   stats: [
     { label: "LeetCode Solved", value: "150+" },
-    { label: "Full-Stack Projects", value: "4" },
+    { label: "Full-Stack Projects", value: "6+" },
     { label: "Cloud Certifications", value: "2" },
     { label: "MCA CGPA", value: "8.1/10" },
   ],
@@ -240,6 +242,8 @@ export const skillsData: SkillCategory[] = [
       "Vite",
       "Yarn",
       "npm",
+      "Vercel",
+      "Render",
       "Git Bash",
       "Copilot",
       "Claude Code",
@@ -262,7 +266,7 @@ export const achievementsData: Achievement[] = [
   },
   {
     title: "Academic Excellence (MCA)",
-    description: "Maintaining a top-tier 8.5/10 CGPA in Master of Computer Applications at Adamas University.",
+    description: "Maintaining a top-tier 8.1/10 CGPA in Master of Computer Applications at Adamas University.",
     year: "2024-2026",
   },
   {
@@ -303,6 +307,7 @@ export const certificationsData = [
   "Oracle Cloud Infrastructure (Certified Professional)",
   "Oracle APEX Developer (Certified Professional)",
   "Oracle Cloud DevOps Developer (Certified Professional)",
+  "Oracle Cloud Certfied Developer (Certified Professional)"
 ];
 
 export interface Project {
@@ -314,18 +319,11 @@ export interface Project {
 
 export const projectsData: Project[] = [
   {
-    title: "PulseOps — Enterprise Monitoring & AI Operations Platform (Built on Grafana)",
+    title: "Smart Door Lock IoT System Dashboard",
     description:
-      "Architected a high-performance enterprise observability platform utilizing React.js, TypeScript, and Redux Toolkit, integrating Prometheus time-series data to deliver real-time, AI-enhanced telemetry dashboards. Engineered scalable, concurrent Go microservices encompassing secure RESTful APIs, implementing robust Role-Based Access Control (RBAC), JWT authentication, and automated alert orchestration, while integrating AI-driven incident analysis and automated PDF reporting pipelines, leveraging SQLite for highly optimized, ACID-compliant state management and persistent data storage. Containerized the full-stack infrastructure utilizing Docker, establishing isolated environments to streamline CI/CD pipelines and ensure seamless deployment of monitoring agents and Grafana visualizations.",
-    tech: ["Go", "React.js", "TypeScript", "Redux Toolkit", "Grafana", "Prometheus", "SQLite", "Docker", "REST APIs"],
-    context: "Enterprise Monitoring & AI Operations",
-  },
-  {
-    title: "TREK — AI-Powered Travel Planning & Booking Platform",
-    description:
-      "Architected a secure, full-stack SPA using Vite, React.js, and TypeScript, backed by an Express.js RESTful API (MVC architecture) that features robust middleware pipelines, JWT-based authentication, and granular RBAC to secure complex user booking workflows. Orchestrated asynchronous third-party API integrations—including the Gemini API, Google Maps, and live Aviation data—to engineer dynamic, context-aware AI travel itinerary generation and real-time spatial visualizations. Engineered optimized SQLite relational schemas to efficiently process transactional booking records, and containerized the backend services and database environments using Docker to ensure cross-environment consistency and scalable deployment.",
-    tech: ["Vite", "React.js", "TypeScript", "Node.js", "Express.js", "SQLite", "JWT", "RBAC", "REST APIs", "Docker", "Gemini API"],
-    context: "AI-Powered Travel Platform",
+      "Engineered a responsive dashboard processing 60+ real-time device metrics per minute. Constructed an MVC Node.js backend, achieving a 75% reduction in hardware latency with ESP32-CAM and applying OOJS for biometric MFA.",
+    tech: ["Node.js", "Express", "React", "JavaScript", "Arduino", "Tailwind CSS"],
+    context: "IoT Full Stack & Flutter",
   },
   {
     title: "WebFix-CMS Website Builder",
